@@ -941,6 +941,9 @@ body{
 .social-links{ margin-top:0.5rem; display:flex; gap:0.6rem; }
 .social-links a{ color:var(--muted); font-size:1.3rem; }
 
+/* Make social links white in hero section for visibility */
+.hero .social-links a{ color: white; }
+
 /* Card and section tweaks */
 section{ background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9)); }
 .skill-category, .education-card, .contact-info{ background:var(--card); }
