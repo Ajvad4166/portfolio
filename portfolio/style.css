@@ -827,9 +827,12 @@ section{ background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,25
 .skill-category, .education-card, .contact-info{ background:var(--card); }
 
 @media (max-width:768px){
-    .hero-grid{ grid-template-columns: 1fr; text-align:center; gap:1rem; }
-    .profile-image{ width:200px; height:200px; }
-    .hero-right h1{ font-size:2rem; }
-    .hero-right .tagline{ font-size:1.2rem; }
-    .social-links{ justify-content:center; }
+    .hero-grid{ grid-template-columns: 1fr; text-align:center; gap:0.5rem; }
+    .profile-image{ width:150px; height:150px; }
+    .hero-right h1{ font-size:1.8rem; }
+    .hero-right .tagline{ font-size:1rem; }
+    .hero-content{ padding:1rem 1.5rem; }
+    .social-links{ justify-content:center; gap:1rem; }
+    .btn{ padding:0.5rem 0.8rem; font-size:0.9rem; }
+    .hero{ height:90vh; }
 }
