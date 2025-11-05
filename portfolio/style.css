@@ -822,7 +822,9 @@ section{ background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,25
 .skill-category, .education-card, .contact-info{ background:var(--card); }
 
 @media (max-width:768px){
-    .hero-grid{ grid-template-columns: 1fr; text-align:center; }
-    .avatar{ margin:0 auto; }
+    .hero-grid{ grid-template-columns: 1fr; text-align:center; gap:1rem; }
+    .profile-image{ width:200px; height:200px; }
     .hero-right h1{ font-size:2rem; }
+    .hero-right .tagline{ font-size:1.2rem; }
+    .social-links{ justify-content:center; }
 }
