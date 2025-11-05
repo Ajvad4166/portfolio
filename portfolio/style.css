@@ -73,11 +73,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: 
-        linear-gradient(120deg, rgba(66, 66, 255, 0.1) 0%, rgba(0, 180, 219, 0.1) 100%),
-        linear-gradient(120deg, rgba(0, 180, 219, 0.1) 0%, rgba(66, 66, 255, 0.1) 100%);
-    background-size: 200% 200%;
-    animation: gradientFlow 15s ease infinite;
+    background: url("images/bg.png") no-repeat center center;
+    background-size: cover;
     position: relative;
     text-align: center;
     overflow: hidden;
@@ -834,5 +831,5 @@ section{ background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,25
     .hero-content{ padding:1rem 1.5rem; }
     .social-links{ justify-content:center; gap:1rem; }
     .btn{ padding:0.5rem 0.8rem; font-size:0.9rem; }
-    .hero{ height:90vh; }
+    .hero{ height:90vh; background-size: cover; background-attachment: fixed; }
 }
