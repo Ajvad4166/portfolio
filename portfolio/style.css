@@ -809,6 +809,32 @@ body{
     transform: scale(1.08);
 }
 
+.profile-image.rotate {
+    animation: rotate360 1s ease-in-out;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hello-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    z-index: 10;
+}
+
 .hero-right{ background: rgba(128,0,128,0.8); padding: 1rem; border-radius: 12px; text-align: center; }
 .hero-right h1{ font-size:2.4rem; margin:0 0 0.3rem 0; text-transform:uppercase; letter-spacing:1px; color: white; }
 .hero-right .tagline{ color: white; margin-bottom:1rem; }
