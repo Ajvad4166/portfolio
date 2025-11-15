@@ -63,17 +63,20 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     .then(response => {
         console.log('Formspree response status:', response.status);
         console.log('Formspree response ok:', response.ok);
+        console.log('Response headers:', response.headers);
         if (response.ok) {
             alert('Thank you for your message! I will get back to you soon.');
             this.reset();
         } else {
             console.error('Formspree error response:', response);
-            alert('There was an error sending your message. Please try again.');
+            response.text().then(text => console.log('Error response body:', text));
+            alert('Form submission failed. Please check your Formspree form ID and try again.');
         }
     })
     .catch(error => {
         console.error('Network error:', error);
-        alert('There was a network error. Please check your internet connection and try again.');
+        console.log('Error details:', error.message, error.stack);
+        alert('Network error occurred. This might be due to:\n1. Invalid Formspree form ID\n2. Form is paused in Formspree\n3. CORS policy\n\nPlease verify your Formspree form is active.');
     })
     .finally(() => {
         // Reset button state
