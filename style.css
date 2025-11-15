@@ -314,12 +314,13 @@ section h2::after {
     line-height: 1.4;
 }
 
-.about-description {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-dark);
-    margin-bottom: 1.5rem;
-}
+    .about-description {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: var(--text-dark);
+        margin-bottom: 1.5rem;
+        text-align: justify; /* Align text evenly on both sides */
+    }
 
 /* Education Section */
 .education-grid {
