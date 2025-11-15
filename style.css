@@ -836,11 +836,11 @@ footer p {
     }
 
     .hero-right h1 {
-        font-size: 2rem; /* Smaller title */
+        font-size: 1.6rem; /* Smaller title - decreased by 4 */
     }
 
     .tagline {
-        font-size: 1rem; /* Smaller tagline */
+        font-size: 0.6rem; /* Smaller tagline - decreased by 4 */
     }
 
     .social-links {
@@ -852,7 +852,7 @@ footer p {
     }
 
     section h2 {
-        font-size: 1.8rem; /* Smaller section headings */
+        font-size: 1.4rem; /* Smaller section headings - decreased by 4 */
     }
 
     .about-text {
@@ -863,7 +863,7 @@ footer p {
     }
 
     .highlight-text {
-        font-size: 1.2rem; /* Smaller highlight text */
+        font-size: 0.8rem; /* Smaller highlight text - decreased by 4 */
     }
 
     .education-card,
