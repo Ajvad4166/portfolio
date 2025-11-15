@@ -241,6 +241,13 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.social-logo {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
 .social-links a:hover {
     transform: translateY(-5px) scale(1.1);
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
@@ -860,6 +867,120 @@ footer p {
     .tech-badge {
         font-size: 0.85rem;
         padding: 0.6rem 1.2rem;
+    }
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+        padding: 0 2rem;
+    }
+
+    .profile-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-right h1 {
+        font-size: 3rem;
+    }
+
+    .tagline {
+        font-size: 1.3rem;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .social-links a {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .social-logo {
+        width: 28px;
+        height: 28px;
+    }
+
+    .education-grid,
+    .certifications-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+/* TV/Large Screen Styles */
+@media (min-width: 1440px) {
+    .hero-grid {
+        gap: 6rem;
+        padding: 0 4rem;
+    }
+
+    .profile-image {
+        width: 400px;
+        height: 400px;
+    }
+
+    .hero-right h1 {
+        font-size: 4rem;
+    }
+
+    .tagline {
+        font-size: 1.8rem;
+    }
+
+    .social-links a {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .social-logo {
+        width: 28px;
+        height: 28px;
+    }
+
+    .education-grid,
+    .certifications-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+
+    .contact-content {
+        gap: 6rem;
+    }
+
+    section h2 {
+        font-size: 3rem;
+    }
+
+    .about-text {
+        padding: 4rem;
+    }
+
+    .highlight-text {
+        font-size: 2rem;
     }
 }
 
