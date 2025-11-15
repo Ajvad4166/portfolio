@@ -782,9 +782,9 @@ footer p {
     .nav-content {
         padding: 0.3rem 0.3rem; /* Even more minimal padding */
         flex-wrap: nowrap;
-        justify-content: space-between; /* Distribute items evenly across width */
+        justify-content: space-between; /* Distribute all items evenly across width */
         align-items: center;
-        gap: 0.4rem; /* Tighter gap between logo and links */
+        gap: 0; /* Remove gap for even distribution */
     }
 
     .logo a {
@@ -794,13 +794,20 @@ footer p {
     }
 
     .nav-links {
-        display: flex;
-        gap: 0.2rem; /* Tighter gap between links */
-        flex-wrap: nowrap;
-        justify-content: flex-start; /* Left-align nav links */
-        flex-shrink: 1;
+        display: contents; /* Make nav-links transparent for layout, allowing even distribution */
+    }
+
+    .nav-links li {
+        flex: 1; /* Distribute links evenly */
+        text-align: center; /* Center each link */
+    }
+
+    .nav-links a {
+        font-size: 0.55rem; /* Even smaller font */
+        padding: 0.15rem 0.2rem; /* Tighter padding */
+        white-space: nowrap;
+        flex-shrink: 1; /* Allow shrinking */
         min-width: 0;
-        overflow: visible; /* Ensure links are visible */
     }
 
     .nav-links a {
