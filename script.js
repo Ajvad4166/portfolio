@@ -20,11 +20,18 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
         }
     }
 
-    // Validate email
-    if (emailInput && !emailInput.checkValidity()) {
-        e.preventDefault();
-        emailInput.reportValidity();
-        return;
+    // Validate email with custom regex for better validation
+    if (emailInput) {
+        const emailValue = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailValue)) {
+            e.preventDefault();
+            emailInput.setCustomValidity('Please enter a valid email address (e.g., user@example.com)');
+            emailInput.reportValidity();
+            emailInput.focus();
+            setTimeout(() => emailInput.setCustomValidity(''), 3000);
+            return;
+        }
     }
 
     // Validate message
