@@ -782,7 +782,7 @@ footer p {
     .nav-content {
         padding: 0.3rem 0.3rem; /* Even more minimal padding */
         flex-wrap: nowrap;
-        justify-content: flex-start; /* Left-align all items */
+        justify-content: space-between; /* Distribute items evenly across width */
         align-items: center;
         gap: 0.4rem; /* Tighter gap between logo and links */
     }
