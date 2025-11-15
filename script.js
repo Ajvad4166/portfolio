@@ -42,8 +42,34 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
 
-    // Let Formspree handle the submission
-    // Note: Formspree will redirect to a success page or show a message
+    e.preventDefault();
+
+    // Prepare form data for Formspree
+    const formData = new FormData(this);
+
+    // Submit to Formspree via AJAX
+    fetch('https://formspree.io/f/myzljprn', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        } else {
+            alert('There was an error sending your message. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error sending your message. Please try again.');
+    })
+    .finally(() => {
+        // Reset button state
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+    });
 });
 
 // Smooth scrolling for navigation links
