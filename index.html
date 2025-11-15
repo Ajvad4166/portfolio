@@ -252,6 +252,8 @@
                     <input id="name-input" type="text" name="name" placeholder="Name" required pattern="[A-Za-z ]+">
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="message" placeholder="Message" required></textarea>
+                    <!-- hCaptcha integration -->
+                    <div class="h-captcha" data-captcha="true"></div>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
@@ -265,5 +267,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- Web3Forms hCaptcha script -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>

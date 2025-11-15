@@ -51,7 +51,14 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
 
     e.preventDefault();
 
-    // Prepare form data for Formspree
+    // Check if hCaptcha is completed
+    const hCaptcha = this.querySelector('textarea[name=h-captcha-response]').value;
+    if (!hCaptcha) {
+        alert("Please fill out captcha field");
+        return;
+    }
+
+    // Prepare form data for Web3Forms
     const formData = new FormData(this);
 
     // Submit to Web3Forms via AJAX
